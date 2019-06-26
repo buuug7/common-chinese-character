@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>常用汉字3500个</title>
+    <style>
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    .word {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        font-size: 2rem;
+        background-color: rgba(255, 0, 0, 0.8);
+        /*border: 1px solid rgba(255, 0, 0, 0.8);*/
+        color: #fff;
+        padding: 1rem;
+        position: relative;
+        text-align: center;
+    }
+
+    .word .num {
+        position: absolute;
+        font-size: 12px;
+        top: 0;
+        right: 0;
+        padding: .2rem;
+        color: #fff;
+        /*background-color: rgba(255, 255, 255, 1);*/
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 150px);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        justify-content: center;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <h2 class="text-center">常用汉字3500个</h2>
+
+    <div v-for="(items, index) in words">
+        <h5 class="text-center">{{index.toUpperCase()}}</h5>
+
+        <div class="container">
+            <div class="word" :key="item.id"
+                 v-for="item in items">
+                <span class="num">{{item.id}}</span>
+                <span class="pinYin">{{item.pinYin}}</span>
+                <span class="text">{{item.text}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="vue.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    words: null,
+  },
+  mounted () {
+    fetch('./words.json').then(res => res.json()).then(json => {
+      let m = {}
+      json.data.forEach(item => {
+        if (m.hasOwnProperty(item.category)) {
+          m[item.category].push(item)
+        } else {
+          m[item.category] = [item]
+        }
+      })
+      this.words = m
+    })
+  },
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+{
+  "name": "3500汉字",
+  "data": [
+    {
+      "id": 1,
+      "text": "啊",
+      "pinYin": "ā",
+      "category": "a"
+    },
+    {
+      "id": 2,
+      "text": "阿",
+      "pinYin": "ā",
+      "category": "a"
+    },
+    {
+      "id": 3,
+      "text": "埃",
+      "pinYin": "āi",
+      "category": "a"
+    },
+    {
+      "id": 4,
+      "text": "挨",
+      "pinYin": "āi",
+      "category": "a"
+    },
+    {
+      "id": 5,
+      "text": "哎",
+      "pinYin": "āi",
+      "category": "a"
+    },
+    {
+      "id": 6,
+      "text": "唉",
+      "pinYin": "āi",
+      "category": "a"
+    },
+    {
+      "id": 7,
+      "text": "哀",
+      "pinYin": "āi",
+      "category": "a"
+    },
+    {
+      "id": 8,
+      "text": "皑",
+      "pinYin": "ái",
+      "category": "a"
+    },
+    {
+      "id": 9,
+      "text": "癌",
+      "pinYin": "ái",
+      "category": "a"
+    },
+    {
+      "id": 10,
+      "text": "蔼",
+      "pinYin": "ǎi",
+      "category": "a"
+    },
+    {
+      "id": 11,
+      "text": "矮",
+      "pinYin": "ǎi",
+      "category": "a"
+    },
+    {
+      "id": 12,
+      "text": "艾",
+      "pinYin": "ài",
+      "category": "a"
+    },
+    {
+      "id": 13,
+      "text": "碍",
+      "pinYin": "ài",
+      "category": "a"
+    },
+    {
+      "id": 14,
+      "text": "安",
+      "pinYin": "ān",
+      "category": "a"
+    },
+    {
+      "id": 15,
+      "text": "隘",
+      "pinYin": "ài",
+      "category": "a"
+    },
+    {
+      "id": 16,
+      "text": "鞍",
+      "pinYin": "ān",
+      "category": "a"
+    },
+    {
+      "id": 17,
+      "text": "氨",
+      "pinYin": "ān",
+      "category": "a"
+    },
+    {
+      "id": 18,
+      "text": "俺",
+      "pinYin": "ǎn",
+      "category": "a"
+    },
+    {
+      "id": 19,
+      "text": "按",
+      "pinYin": "àn",
+      "category": "a"
+    },
+    {
+      "id": 20,
+      "text": "士",
+      "pinYin": "àn",
+      "category": "b"
+    },
+    {
+      "id": 21,
+      "text": "设",
+      "pinYin": "àn",
+      "category": "b"
+    }
+  ]
+}
