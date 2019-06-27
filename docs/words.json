@@ -117,15 +117,99 @@
     },
     {
       "id": 20,
-      "text": "士",
+      "text": "暗",
       "pinYin": "àn",
-      "category": "b"
+      "category": "a"
     },
     {
       "id": 21,
-      "text": "设",
+      "text": "岸",
       "pinYin": "àn",
-      "category": "b"
+      "category": "a"
+    },
+    {
+      "id": 22,
+      "text": "胺",
+      "pinYin": "àn",
+      "category": "a"
+    },
+    {
+      "id": 23,
+      "text": "案",
+      "pinYin": "àn",
+      "category": "a"
+    },
+    {
+      "id": 24,
+      "text": "肮",
+      "pinYin": "āng",
+      "category": "a"
+    },
+    {
+      "id": 25,
+      "text": "昂",
+      "pinYin": "áng",
+      "category": "a"
+    },
+    {
+      "id": 26,
+      "text": "盎",
+      "pinYin": "àng",
+      "category": "a"
+    },
+    {
+      "id": 27,
+      "text": "凹",
+      "pinYin": "āo",
+      "category": "a"
+    },
+    {
+      "id": 28,
+      "text": "敖",
+      "pinYin": "áo",
+      "category": "a"
+    },
+    {
+      "id": 29,
+      "text": "熬",
+      "pinYin": "áo",
+      "category": "a"
+    },
+    {
+      "id": 30,
+      "text": "翶",
+      "pinYin": "áo",
+      "category": "a"
+    },
+    {
+      "id": 31,
+      "text": "袄",
+      "pinYin": "ǎo",
+      "category": "a"
+    },
+    {
+      "id": 32,
+      "text": "傲",
+      "pinYin": "ào",
+      "category": "a"
+    },
+    {
+      "id": 33,
+      "text": "奥",
+      "pinYin": "ào",
+      "category": "a"
+    },
+    {
+      "id": 34,
+      "text": "懊",
+      "pinYin": "ào",
+      "category": "a"
+    },
+    {
+      "id": 35,
+      "text": "澳",
+      "pinYin": "ào",
+      "category": "a"
     }
   ]
 }
