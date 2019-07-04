@@ -40,6 +40,10 @@
         /*background-color: rgba(255, 255, 255, 1);*/
     }
 
+    .word .pinYin {
+        font-size: 20px;
+    }
+
     .container {
         display: grid;
         grid-template-columns: repeat(auto-fill, 150px);
@@ -51,6 +55,17 @@
     .text-center {
         text-align: center;
     }
+
+    .letter {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .letter.current{
+        text-decoration: none;
+        color: black;
+        cursor: default;
+    }
     </style>
 </head>
 <body>
@@ -58,16 +73,21 @@
 <div id="app">
     <h2 class="text-center">常用汉字3500个</h2>
 
-    <div v-for="(items, index) in words">
-        <h5 class="text-center">{{index.toUpperCase()}}</h5>
+    <div class="letters">
+        <a href="#" class="letter"
+           @click="handleClick(item)"
+           v-for="item in letters"
+           :class="{current: item === currentCategory }"
+        >{{item}}</a>
+    </div>
 
-        <div class="container">
-            <div class="word" :key="item.id"
-                 v-for="item in items">
-                <span class="num">{{item.id}}</span>
-                <span class="pinYin">{{item.pinYin}}</span>
-                <span class="text">{{item.text}}</span>
-            </div>
+    <h3 class="text-center">{{currentCategory}}</h3>
+    <div class="container">
+        <div class="word" :key="item.id"
+             v-for="item in words">
+            <span class="num">{{item.id}}</span>
+            <span class="pinYin">{{item.pinYin}}</span>
+            <span class="text">{{item.text}}</span>
         </div>
     </div>
 
@@ -79,20 +99,37 @@ new Vue({
   el: '#app',
   data: {
     words: null,
+    currentCategory: 'A'
   },
   mounted () {
-    fetch('./words.json').then(res => res.json()).then(json => {
-      let m = {}
-      json.data.forEach(item => {
-        if (m.hasOwnProperty(item.category)) {
-          m[item.category].push(item)
-        } else {
-          m[item.category] = [item]
-        }
-      })
-      this.words = m
-    })
+    // 默认显示 A
+    this.handleClick('A');
   },
+  
+  computed: {
+    // generate A-Z
+    letters: function () {
+      const letters = [];
+      for (let i=0;i<26; i++) {
+        letters.push(String.fromCharCode(65+i))
+      }
+      return letters;
+    }
+  },
+
+  methods: {
+
+    handleClick: function (item){
+      this.currentCategory = item;
+      this.getData(item);
+    },
+
+    getData: function (category) {
+      fetch(`./${category}.json`).then(res => res.json()).then(json => {
+        this.words = json.data
+      });
+    }
+  }
 })
 </script>
 </body>

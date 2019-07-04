@@ -1,0 +1,80 @@
+{
+  "name": "3500汉字",
+  "data": [
+    {
+      "id": 1,
+      "text": "芭",
+      "pinYin": "bā"
+    },
+    {
+      "id": 2,
+      "text": "捌",
+      "pinYin": "bā"
+    },
+    {
+      "id": 3,
+      "text": "捌",
+      "pinYin": "bā"
+    },
+    {
+      "id": 4,
+      "text": "扒",
+      "pinYin": "bā"
+    },
+    {
+      "id": 5,
+      "text": "叭",
+      "pinYin": "bā"
+    },
+    {
+      "id": 6,
+      "text": "吧",
+      "pinYin": "bā ba"
+    },
+    {
+      "id": 7,
+      "text": "笆",
+      "pinYin": "bā"
+    },
+    {
+      "id": 8,
+      "text": "八",
+      "pinYin": "bā"
+    },
+    {
+      "id": 9,
+      "text": "疤",
+      "pinYin": "bā"
+    },
+    {
+      "id": 10,
+      "text": "巴",
+      "pinYin": "bā"
+    },
+    {
+      "id": 11,
+      "text": "拔",
+      "pinYin": "bá"
+    },
+    {
+      "id": 12,
+      "text": "跋",
+      "pinYin": "bá"
+    },
+    {
+      "id": 13,
+      "text": "靶",
+      "pinYin": "bǎ"
+    },
+    {
+      "id": 14,
+      "text": "把",
+      "pinYin": "bǎ"
+    },
+    {
+      "id": 15,
+      "text": "耙",
+      "pinYin": "bà pá"
+    }
+  ]
+}
