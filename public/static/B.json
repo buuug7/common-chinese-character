@@ -1,0 +1,430 @@
+{
+  "name": "3500汉字",
+  "data": [
+    {
+      "id": 1,
+      "text": "芭",
+      "pinYin": "bā"
+    },
+    {
+      "id": 2,
+      "text": "捌",
+      "pinYin": "bā"
+    },
+    {
+      "id": 3,
+      "text": "捌",
+      "pinYin": "bā"
+    },
+    {
+      "id": 4,
+      "text": "扒",
+      "pinYin": "bā"
+    },
+    {
+      "id": 5,
+      "text": "叭",
+      "pinYin": "bā"
+    },
+    {
+      "id": 6,
+      "text": "吧",
+      "pinYin": "bā ba"
+    },
+    {
+      "id": 7,
+      "text": "笆",
+      "pinYin": "bā"
+    },
+    {
+      "id": 8,
+      "text": "八",
+      "pinYin": "bā"
+    },
+    {
+      "id": 9,
+      "text": "疤",
+      "pinYin": "bā"
+    },
+    {
+      "id": 10,
+      "text": "巴",
+      "pinYin": "bā"
+    },
+    {
+      "id": 11,
+      "text": "拔",
+      "pinYin": "bá"
+    },
+    {
+      "id": 12,
+      "text": "跋",
+      "pinYin": "bá"
+    },
+    {
+      "id": 13,
+      "text": "靶",
+      "pinYin": "bǎ"
+    },
+    {
+      "id": 14,
+      "text": "把",
+      "pinYin": "bǎ"
+    },
+    {
+      "id": 15,
+      "text": "耙",
+      "pinYin": "bà pá"
+    },
+    {
+      "id": 16,
+      "text": "坝",
+      "pinYin": "bà"
+    },
+    {
+      "id": 17,
+      "text": "霸",
+      "pinYin": "bà"
+    },
+    {
+      "id": 18,
+      "text": "罢",
+      "pinYin": "bà"
+    },
+    {
+      "id": 19,
+      "text": "爸",
+      "pinYin": "bà"
+    },
+    {
+      "id": 20,
+      "text": "白",
+      "pinYin": "bái"
+    },
+    {
+      "id": 21,
+      "text": "柏",
+      "pinYin": "bǎi"
+    },
+    {
+      "id": 22,
+      "text": "百",
+      "pinYin": "bǎi"
+    },
+    {
+      "id": 23,
+      "text": "摆",
+      "pinYin": "bǎi"
+    },
+    {
+      "id": 24,
+      "text": "佰",
+      "pinYin": "bǎi"
+    },
+    {
+      "id": 25,
+      "text": "败",
+      "pinYin": "bài"
+    },
+    {
+      "id": 26,
+      "text": "拜",
+      "pinYin": "bài"
+    },
+    {
+      "id": 27,
+      "text": "稗",
+      "pinYin": "bài"
+    },
+    {
+      "id": 28,
+      "text": "斑",
+      "pinYin": "bān"
+    },
+    {
+      "id": 29,
+      "text": "班",
+      "pinYin": "bān"
+    },
+    {
+      "id": 30,
+      "text": "搬",
+      "pinYin": "bān"
+    },
+    {
+      "id": 31,
+      "text": "扳",
+      "pinYin": "bān"
+    },
+    {
+      "id": 32,
+      "text": "般",
+      "pinYin": "bān"
+    },
+    {
+      "id": 33,
+      "text": "颁",
+      "pinYin": "bān"
+    },
+    {
+      "id": 34,
+      "text": "板",
+      "pinYin": "bǎn"
+    },
+    {
+      "id": 35,
+      "text": "版",
+      "pinYin": "bǎn"
+    },
+    {
+      "id": 36,
+      "text": "扮",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 37,
+      "text": "拌",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 38,
+      "text": "伴",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 39,
+      "text": "瓣",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 40,
+      "text": "半",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 41,
+      "text": "办",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 42,
+      "text": "绊",
+      "pinYin": "bàn"
+    },
+    {
+      "id": 43,
+      "text": "邦",
+      "pinYin": "bāng"
+    },
+    {
+      "id": 44,
+      "text": "帮",
+      "pinYin": "bāng"
+    },
+    {
+      "id": 45,
+      "text": "梆",
+      "pinYin": "bāng"
+    },
+    {
+      "id": 46,
+      "text": "榜",
+      "pinYin": "bǎng"
+    },
+    {
+      "id": 47,
+      "text": "膀",
+      "pinYin": "bǎng"
+    },
+    {
+      "id": 48,
+      "text": "绑",
+      "pinYin": "bǎng"
+    },
+    {
+      "id": 49,
+      "text": "棒",
+      "pinYin": "bàng"
+    },
+    {
+      "id": 50,
+      "text": "磅",
+      "pinYin": "bàng"
+    },
+    {
+      "id": 51,
+      "text": "蚌",
+      "pinYin": "bàng"
+    },
+    {
+      "id": 52,
+      "text": "镑",
+      "pinYin": "bàng"
+    },
+    {
+      "id": 53,
+      "text": "傍",
+      "pinYin": "bàng"
+    },
+    {
+      "id": 54,
+      "text": "谤",
+      "pinYin": "bàng"
+    },
+    {
+      "id": 55,
+      "text": "苞",
+      "pinYin": "bāo"
+    },
+    {
+      "id": 56,
+      "text": "胞",
+      "pinYin": "bāo"
+    },
+    {
+      "id": 57,
+      "text": "包",
+      "pinYin": "bāo"
+    },
+    {
+      "id": 58,
+      "text": "褒",
+      "pinYin": "bāo"
+    },
+    {
+      "id": 59,
+      "text": "剥",
+      "pinYin": "bāo"
+    },
+    {
+      "id": 60,
+      "text": "薄",
+      "pinYin": "báo"
+    },
+    {
+      "id": 61,
+      "text": "雹",
+      "pinYin": "báo"
+    },
+    {
+      "id": 62,
+      "text": "保",
+      "pinYin": "bǎo"
+    },
+    {
+      "id": 63,
+      "text": "堡",
+      "pinYin": "bǎo"
+    },
+    {
+      "id": 64,
+      "text": "饱",
+      "pinYin": "bǎo"
+    },
+    {
+      "id": 65,
+      "text": "宝",
+      "pinYin": "bǎo"
+    },
+    {
+      "id": 66,
+      "text": "抱",
+      "pinYin": "bào"
+    },
+    {
+      "id": 67,
+      "text": "报",
+      "pinYin": "bào"
+    },
+    {
+      "id": 68,
+      "text": "暴",
+      "pinYin": "bào"
+    },
+    {
+      "id": 69,
+      "text": "豹",
+      "pinYin": "bào"
+    },
+    {
+      "id": 70,
+      "text": "鲍",
+      "pinYin": "bào"
+    },
+    {
+      "id": 71,
+      "text": "爆",
+      "pinYin": "bào"
+    },
+    {
+      "id": 72,
+      "text": "杯",
+      "pinYin": "bēi"
+    },
+    {
+      "id": 73,
+      "text": "碑",
+      "pinYin": "bēi"
+    },
+    {
+      "id": 74,
+      "text": "悲",
+      "pinYin": "bēi"
+    },
+    {
+      "id": 75,
+      "text": "卑",
+      "pinYin": "bēi"
+    },
+    {
+      "id": 76,
+      "text": "北",
+      "pinYin": "běi"
+    },
+    {
+      "id": 77,
+      "text": "辈",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 78,
+      "text": "背",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 79,
+      "text": "贝",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 80,
+      "text": "钡",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 81,
+      "text": "倍",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 82,
+      "text": "狈",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 83,
+      "text": "备",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 84,
+      "text": "惫",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 85,
+      "text": "焙",
+      "pinYin": "bèi"
+    }
+  ]
+}
