@@ -1,5 +1,5 @@
 {
-  "name": "3500汉字",
+  "name": "常用汉字",
   "data": [
     {
       "id": 1,
@@ -425,6 +425,56 @@
       "id": 85,
       "text": "焙",
       "pinYin": "bèi"
+    },
+    {
+      "id": 86,
+      "text": "被",
+      "pinYin": "bèi"
+    },
+    {
+      "id": 87,
+      "text": "奔",
+      "pinYin": "bēn"
+    },
+    {
+      "id": 88,
+      "text": "苯",
+      "pinYin": "běn"
+    },
+    {
+      "id": 89,
+      "text": "本",
+      "pinYin": "běn"
+    },
+    {
+      "id": 90,
+      "text": "笨",
+      "pinYin": "bèn"
+    },
+    {
+      "id": 91,
+      "text": "崩",
+      "pinYin": "bēng"
+    },
+    {
+      "id": 92,
+      "text": "绷",
+      "pinYin": "bēng"
+    },
+    {
+      "id": 93,
+      "text": "甭",
+      "pinYin": "béng"
+    },
+    {
+      "id": 94,
+      "text": "泵",
+      "pinYin": "bèng"
+    },
+    {
+      "id": 95,
+      "text": "蹦",
+      "pinYin": "bèng"
     }
   ]
 }

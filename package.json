@@ -4,7 +4,7 @@
   "description": "改项目收录汉语中最常用的汉字，以简单直观的方式通过 WEB 页面来展示。",
   "main": "index.js",
   "scripts": {
-    "star": "webpack-dev-server",
+    "start": "webpack-dev-server --open",
     "build": "webpack",
     "pretty-quick": "pretty-quick"
   },

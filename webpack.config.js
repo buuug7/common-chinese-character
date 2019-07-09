@@ -12,10 +12,7 @@ module.exports = {
     publicPath: PUBLIC_PATH
   },
   devServer: {
-    contentBase: [
-      path.resolve(__dirname, "docs"),
-      path.resolve(__dirname, "public")
-    ]
+    contentBase: [path.resolve(__dirname, "docs")]
   },
 
   plugins: [
