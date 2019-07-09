@@ -4693,7 +4693,7 @@
         },
         methods: {
           getData(t) {
-            fetch(`/static/${t}.json`)
+            fetch(`static/${t}.json`)
               .then(t => t.json())
               .then(t => {
                 console.log(t), (this.items = t.data);

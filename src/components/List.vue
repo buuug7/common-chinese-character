@@ -31,7 +31,7 @@ export default {
 
   methods: {
     getData(category) {
-      fetch(`/static/${category}.json`)
+      fetch(`static/${category}.json`)
         .then(res => res.json())
         .then(json => {
           console.log(json);
