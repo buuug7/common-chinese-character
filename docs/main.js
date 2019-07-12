@@ -381,10 +381,10 @@
           return t.charAt(0).toUpperCase() + t.slice(1);
         }),
         A = /\B([A-Z])/g,
-        O = C(function(t) {
+        k = C(function(t) {
           return t.replace(A, "-$1").toLowerCase();
         });
-      var k = Function.prototype.bind
+      var O = Function.prototype.bind
         ? function(t, e) {
             return t.bind(e);
           }
@@ -707,7 +707,7 @@
               this.observeArray(t))
             : this.walk(t);
       };
-      function Ot(t, e) {
+      function kt(t, e) {
         var n;
         if (c(t) && !(t instanceof ht))
           return (
@@ -723,14 +723,14 @@
             n
           );
       }
-      function kt(t, e, n, r, o) {
+      function Ot(t, e, n, r, o) {
         var i = new ft(),
           a = Object.getOwnPropertyDescriptor(t, e);
         if (!a || !1 !== a.configurable) {
           var s = a && a.get,
             c = a && a.set;
           (s && !c) || 2 !== arguments.length || (n = t[e]);
-          var u = !o && Ot(n);
+          var u = !o && kt(n);
           Object.defineProperty(t, e, {
             enumerable: !0,
             configurable: !0,
@@ -755,7 +755,7 @@
               e === r ||
                 (e != e && r != r) ||
                 (s && !c) ||
-                (c ? c.call(t, e) : (n = e), (u = !o && Ot(e)), i.notify());
+                (c ? c.call(t, e) : (n = e), (u = !o && kt(e)), i.notify());
             }
           });
         }
@@ -768,7 +768,7 @@
         return t._isVue || (r && r.vmCount)
           ? n
           : r
-          ? (kt(r.value, e, n), r.dep.notify(), n)
+          ? (Ot(r.value, e, n), r.dep.notify(), n)
           : ((t[e] = n), n);
       }
       function Tt(t, e) {
@@ -781,10 +781,10 @@
         }
       }
       (At.prototype.walk = function(t) {
-        for (var e = Object.keys(t), n = 0; n < e.length; n++) kt(t, e[n]);
+        for (var e = Object.keys(t), n = 0; n < e.length; n++) Ot(t, e[n]);
       }),
         (At.prototype.observeArray = function(t) {
-          for (var e = 0, n = t.length; e < n; e++) Ot(t[e]);
+          for (var e = 0, n = t.length; e < n; e++) kt(t[e]);
         });
       var Et = U.optionMergeStrategies;
       function jt(t, e) {
@@ -937,7 +937,7 @@
           s = Bt(Boolean, o.type);
         if (s > -1)
           if (i && !b(o, "default")) a = !1;
-          else if ("" === a || a === O(t)) {
+          else if ("" === a || a === k(t)) {
             var c = Bt(String, o.type);
             (c < 0 || s < c) && (a = !0);
           }
@@ -958,7 +958,7 @@
               : r;
           })(r, o, t);
           var u = xt;
-          $t(!0), Ot(a), $t(u);
+          $t(!0), kt(a), $t(u);
         }
         return a;
       }
@@ -1333,7 +1333,7 @@
           : i
           ? be(i, t)
           : r
-          ? O(r) !== e
+          ? k(r) !== e
           : void 0;
       }
       function we(t, e, n, r, o) {
@@ -1351,7 +1351,7 @@
                     : t.attrs || (t.attrs = {});
               }
               var c = x(a),
-                u = O(a);
+                u = k(a);
               c in i ||
                 u in i ||
                 ((i[a] = n[a]),
@@ -1386,13 +1386,13 @@
       function Ae(t, e, n) {
         if (Array.isArray(t))
           for (var r = 0; r < t.length; r++)
-            t[r] && "string" != typeof t[r] && Oe(t[r], e + "_" + r, n);
-        else Oe(t, e, n);
+            t[r] && "string" != typeof t[r] && ke(t[r], e + "_" + r, n);
+        else ke(t, e, n);
       }
-      function Oe(t, e, n) {
+      function ke(t, e, n) {
         (t.isStatic = !0), (t.key = e), (t.isOnce = n);
       }
-      function ke(t, e) {
+      function Oe(t, e) {
         if (e)
           if (l(e)) {
             var n = (t.on = t.on ? T({}, t.on) : {});
@@ -1439,7 +1439,7 @@
           (t._v = gt),
           (t._e = yt),
           (t._u = Se),
-          (t._g = ke),
+          (t._g = Oe),
           (t._d = Te),
           (t._p = Ee);
       }
@@ -1692,7 +1692,7 @@
                   c = t.props;
                 if (i(s) || i(c))
                   for (var u in r) {
-                    var l = O(u);
+                    var l = k(u);
                     ce(a, c, u, l, !0) || ce(a, s, u, l, !1);
                   }
                 return a;
@@ -2075,7 +2075,7 @@
             var i = function(i) {
               o.push(i);
               var a = Ft(i, e, n, t);
-              kt(r, i, a), i in t || mn(t, "_props", i);
+              Ot(r, i, a), i in t || mn(t, "_props", i);
             };
             for (var a in e) i(a);
             $t(!0);
@@ -2084,7 +2084,7 @@
             (function(t, e) {
               t.$options.props;
               for (var n in e)
-                t[n] = "function" != typeof e[n] ? j : k(e[n], t);
+                t[n] = "function" != typeof e[n] ? j : O(e[n], t);
             })(t, e.methods),
           e.data
             ? (function(t) {
@@ -2117,9 +2117,9 @@
                         mn(t, "_data", i));
                 }
                 var a;
-                Ot(e, !0);
+                kt(e, !0);
               })(t)
-            : Ot((t._data = {}), !0),
+            : kt((t._data = {}), !0),
           e.computed &&
             (function(t, e) {
               var n = (t._computedWatchers = Object.create(null)),
@@ -2195,7 +2195,7 @@
       function An(t) {
         this._init(t);
       }
-      function On(t) {
+      function kn(t) {
         t.cid = 0;
         var e = 1;
         t.extend = function(t) {
@@ -2238,7 +2238,7 @@
           );
         };
       }
-      function kn(t) {
+      function On(t) {
         return t && (t.Ctor.options.name || t.tag);
       }
       function Sn(t, e) {
@@ -2255,7 +2255,7 @@
         for (var i in n) {
           var a = n[i];
           if (a) {
-            var s = kn(a.componentOptions);
+            var s = On(a.componentOptions);
             s && !e(s) && En(n, i, r, o);
           }
         }
@@ -2325,8 +2325,8 @@
                   return Be(t, e, n, r, o, !0);
                 });
               var i = n && n.data;
-              kt(t, "$attrs", (i && i.attrs) || r, null, !0),
-                kt(t, "$listeners", e._parentListeners || r, null, !0);
+              Ot(t, "$attrs", (i && i.attrs) || r, null, !0),
+                Ot(t, "$listeners", e._parentListeners || r, null, !0);
             })(e),
             en(e, "beforeCreate"),
             (function(t) {
@@ -2334,7 +2334,7 @@
               e &&
                 ($t(!1),
                 Object.keys(e).forEach(function(n) {
-                  kt(t, n, e[n]);
+                  Ot(t, n, e[n]);
                 }),
                 $t(!0));
             })(e),
@@ -2540,7 +2540,7 @@
                 e = qe(t),
                 n = e && e.componentOptions;
               if (n) {
-                var r = kn(n),
+                var r = On(n),
                   o = this.include,
                   i = this.exclude;
                 if ((o && (!r || !Sn(o, r))) || (i && r && Sn(i, r))) return e;
@@ -2576,13 +2576,13 @@
             warn: ut,
             extend: T,
             mergeOptions: Mt,
-            defineReactive: kt
+            defineReactive: Ot
           }),
           (t.set = St),
           (t.delete = Tt),
           (t.nextTick = ee),
           (t.observable = function(t) {
-            return Ot(t), t;
+            return kt(t), t;
           }),
           (t.options = Object.create(null)),
           F.forEach(function(e) {
@@ -2610,7 +2610,7 @@
               return (this.options = Mt(this.options, t)), this;
             };
           })(t),
-          On(t),
+          kn(t),
           (function(t) {
             F.forEach(function(e) {
               t[e] = function(t, n) {
@@ -2990,7 +2990,7 @@
       function Ar(t, e, n, r) {
         (r || gr).removeEventListener(t, e._wrapper || e, n);
       }
-      function Or(t, e) {
+      function kr(t, e) {
         if (!o(t.data.on) || !o(e.data.on)) {
           var n = e.data.on || {},
             r = t.data.on || {};
@@ -3007,8 +3007,8 @@
             (gr = void 0);
         }
       }
-      var kr,
-        Sr = { create: Or, update: Or };
+      var Or,
+        Sr = { create: kr, update: kr };
       function Tr(t, e) {
         if (!o(t.data.domProps) || !o(e.data.domProps)) {
           var n,
@@ -3028,9 +3028,9 @@
               var u = o(r) ? "" : String(r);
               Er(a, u) && (a.value = u);
             } else if ("innerHTML" === n && Gn(a.tagName) && o(a.innerHTML)) {
-              (kr = kr || document.createElement("div")).innerHTML =
+              (Or = Or || document.createElement("div")).innerHTML =
                 "<svg>" + r + "</svg>";
-              for (var l = kr.firstChild; a.firstChild; )
+              for (var l = Or.firstChild; a.firstChild; )
                 a.removeChild(a.firstChild);
               for (; l.firstChild; ) a.appendChild(l.firstChild);
             } else if (r !== s[n])
@@ -3089,7 +3089,7 @@
         Fr = function(t, e, n) {
           if (Mr.test(e)) t.style.setProperty(e, n);
           else if (Pr.test(n))
-            t.style.setProperty(O(e), n.replace(Pr, ""), "important");
+            t.style.setProperty(k(e), n.replace(Pr, ""), "important");
           else {
             var r = Ur(e);
             if (Array.isArray(n))
@@ -3320,20 +3320,20 @@
               x = r.appearCancelled,
               $ = r.duration,
               A = Ze,
-              O = Ze.$vnode;
-            O && O.parent;
+              k = Ze.$vnode;
+            k && k.parent;
 
           )
-            (A = O.context), (O = O.parent);
-          var k = !A._isMounted || !t.isRootInsert;
-          if (!k || C || "" === C) {
-            var S = k && d ? d : u,
-              T = k && v ? v : f,
-              E = k && p ? p : l,
-              j = (k && b) || m,
-              I = k && "function" == typeof C ? C : y,
-              D = (k && w) || g,
-              N = (k && x) || _,
+            (A = k.context), (k = k.parent);
+          var O = !A._isMounted || !t.isRootInsert;
+          if (!O || C || "" === C) {
+            var S = O && d ? d : u,
+              T = O && v ? v : f,
+              E = O && p ? p : l,
+              j = (O && b) || m,
+              I = O && "function" == typeof C ? C : y,
+              D = (O && w) || g,
+              N = (O && x) || _,
               L = h(c($) ? $.enter : $);
             0;
             var P = !1 !== a && !Z,
@@ -3595,7 +3595,7 @@
             var d = (e.elm = t.elm);
             if (a(t.isAsyncPlaceholder))
               i(e.asyncFactory.resolved)
-                ? k(t.elm, e, n)
+                ? O(t.elm, e, n)
                 : (e.isAsyncPlaceholder = !0);
             else if (
               a(e.isStatic) &&
@@ -3680,8 +3680,8 @@
           if (a(n) && i(t.parent)) t.parent.data.pendingInsert = e;
           else for (var r = 0; r < e.length; ++r) e[r].data.hook.insert(e[r]);
         }
-        var O = m("attrs,class,staticClass,staticStyle,key");
-        function k(t, e, n, r) {
+        var k = m("attrs,class,staticClass,staticStyle,key");
+        function O(t, e, n, r) {
           var o,
             s = e.tag,
             c = e.data,
@@ -3705,7 +3705,7 @@
                   if (o !== t.innerHTML) return !1;
                 } else {
                   for (var l = !0, f = t.firstChild, p = 0; p < u.length; p++) {
-                    if (!f || !k(f, u[p], n, r)) {
+                    if (!f || !O(f, u[p], n, r)) {
                       l = !1;
                       break;
                     }
@@ -3717,7 +3717,7 @@
             if (i(c)) {
               var h = !1;
               for (var m in c)
-                if (!O(m)) {
+                if (!k(m)) {
                   (h = !0), y(e, n);
                   break;
                 }
@@ -3741,7 +3741,7 @@
                     (1 === t.nodeType &&
                       t.hasAttribute(P) &&
                       (t.removeAttribute(P), (n = !0)),
-                    a(n) && k(t, e, d))
+                    a(n) && O(t, e, d))
                   )
                     return A(e, d, !0), t;
                   (c = t),
@@ -3760,7 +3760,7 @@
                         r.create[w](nr, y);
                       var x = y.data.hook.insert;
                       if (x.merged)
-                        for (var O = 1; O < x.fns.length; O++) x.fns[O]();
+                        for (var k = 1; k < x.fns.length; k++) x.fns[k]();
                     } else er(y);
                     y = y.parent;
                   }
@@ -3873,7 +3873,7 @@
           ? t
           : Ao(t.componentInstance._vnode);
       }
-      var Oo = {
+      var ko = {
           model: yo,
           show: {
             bind: function(t, e, n) {
@@ -3907,7 +3907,7 @@
             }
           }
         },
-        ko = {
+        Oo = {
           name: String,
           appear: Boolean,
           css: Boolean,
@@ -3948,7 +3948,7 @@
         },
         Do = {
           name: "transition",
-          props: ko,
+          props: Oo,
           abstract: !0,
           render: function(t) {
             var e = this,
@@ -4020,7 +4020,7 @@
             }
           }
         },
-        No = T({ tag: String, moveClass: String }, ko);
+        No = T({ tag: String, moveClass: String }, Oo);
       function Lo(t) {
         t.elm._moveCb && t.elm._moveCb(), t.elm._enterCb && t.elm._enterCb();
       }
@@ -4158,7 +4158,7 @@
                 e.constructor === window.HTMLElement)
             : (Zn[t] = /HTMLUnknownElement/.test(e.toString()));
         }),
-        T(An.options.directives, Oo),
+        T(An.options.directives, ko),
         T(An.options.components, Fo),
         (An.prototype.__patch__ = q ? mo : j),
         (An.prototype.$mount = function(t, e) {
@@ -4667,7 +4667,7 @@
       var t = this,
         e = t.$createElement,
         n = t._self._c || e;
-      return n("div", { staticClass: "item" }, [
+      return n("div", { staticClass: "item", on: { click: t.handleClick } }, [
         n("span", { staticClass: "num" }, [t._v(t._s(t.item.id))]),
         t._v(" "),
         n("span", { staticClass: "pin-yin" }, [t._v(t._s(t.item.pinYin))]),
@@ -4676,7 +4676,14 @@
       ]);
     };
     f._withStripped = !0;
-    var d = { props: ["item"] },
+    var d = {
+        props: ["item"],
+        methods: {
+          handleClick() {
+            console.log(this.item);
+          }
+        }
+      },
       p = (n(10), s(d, f, [], !1, null, null, null));
     p.options.__file = "src/components/Item.vue";
     var v = {

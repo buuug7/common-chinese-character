@@ -1,5 +1,5 @@
 <template>
-  <div class="item">
+  <div class="item" @click="handleClick">
     <span class="num">{{ item.id }}</span>
     <span class="pin-yin">{{ item.pinYin }}</span>
     <span class="text">{{ item.text }}</span>
@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: ["item"]
+  props: ["item"],
+  methods: {
+    handleClick() {
+      console.log(this.item);
+    }
+  }
 };
 </script>
 
