@@ -31,11 +31,13 @@ export default {
 
   methods: {
     getData(category) {
-      fetch(`static/${category}.json`)
-        .then(res => res.json())
-        .then(json => {
-          console.log(json);
-          this.items = json.data;
+      import(`../res/${category}.json`)
+        .then(({ data }) => {
+          console.log("data", data);
+          this.items = data;
+        })
+        .catch(err => {
+          console.error(err);
         });
     }
   }

@@ -12,6 +12,10 @@ export default {
   methods: {
     handleClick() {
       console.log(this.item);
+      const { item } = this;
+      window.open(
+        `https://hanyu.baidu.com/zici/s?wd=${item.text}&query=${item.text}&srcid=28232&from=kg0`
+      );
     }
   }
 };
@@ -30,6 +34,7 @@ export default {
   position: relative;
   text-align: center;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .item .num {

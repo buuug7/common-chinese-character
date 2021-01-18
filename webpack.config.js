@@ -28,7 +28,7 @@ module.exports = {
         }
       ],
       {
-        ignore: ["index.html"]
+        // ignore: ["index.html"]
       }
     ),
     new VueLoaderPlugin()
@@ -42,7 +42,12 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: "babel-loader"
+        use: {
+          loader: "babel-loader",
+          options: {
+            plugins: ["@babel/plugin-syntax-dynamic-import"]
+          }
+        }
       },
       {
         test: /\.(css|scss)$/,

@@ -13,6 +13,7 @@
 <script>
 import Nav from "./components/Nav.vue";
 import List from "./components/List.vue";
+
 export default {
   data() {
     return {
