@@ -4,6 +4,7 @@
       href="#"
       class="letter"
       :class="{ current: item === current }"
+      :key="item"
       @click="$emit('click', item)"
       v-for="item in letters"
     >

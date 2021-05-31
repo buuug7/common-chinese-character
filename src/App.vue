@@ -1,39 +1,46 @@
 <template>
   <div>
-    <h2 class="text-center">常用汉字</h2>
-
-    <Nav :current="currentCategory" @click="handleClick"></Nav>
-
-    <h3 class="text-center">{{ currentCategory }}</h3>
-
-    <List :current="currentCategory"></List>
+    <div class="header">
+      <Tab
+        :items="['常用汉字', '词语频率表']"
+        :selectedItem="showType"
+        @change="showType = $event"
+      />
+    </div>
+    <div class="container">
+      <CommonChineseCharacter v-if="showType === '常用汉字'" />
+      <WordFrequency v-if="showType === '词语频率表'" />
+    </div>
   </div>
 </template>
 
 <script>
-import Nav from "./components/Nav.vue";
-import List from "./components/List.vue";
+import Tab from "./components/Tab.vue";
+import CommonChineseCharacter from "./components/CommonChineseCharacter.vue";
+import WordFrequency from './components/WordFrequency.vue'
 
 export default {
   data() {
     return {
-      currentCategory: "A"
+      showType: "常用汉字",
     };
   },
   components: {
-    Nav,
-    List
+    WordFrequency,
+    Tab,
+    CommonChineseCharacter,
   },
 
-  methods: {
-    handleClick(item) {
-      this.currentCategory = item;
-    }
-  }
+  methods: {},
 };
 </script>
 
 <style>
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 .text-center {
   text-align: center;
 }

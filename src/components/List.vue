@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <Item v-for="item in items" :item="item"></Item>
+    <Item v-for="item in items" :item="item" :key="item.id"></Item>
   </div>
 </template>
 
@@ -38,6 +38,7 @@ export default {
         })
         .catch(err => {
           console.error(err);
+          this.items = []
         });
     }
   }
