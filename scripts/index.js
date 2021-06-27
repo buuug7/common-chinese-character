@@ -26,4 +26,4 @@ function csv2json(filePath) {
   });
 }
 
-csv2json("C:\\Users\\buuug7\\code\\common-chinese-character\\CorpusWordlist.csv");
+csv2json("C:\\Users\\buuug7\\code\\common-chinese-character\\common-used-words.csv");

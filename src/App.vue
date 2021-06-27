@@ -1,22 +1,21 @@
 <template>
   <div>
-    <div class="header">
-      <Tab
-        :items="['词语频率表', '常用汉字']"
-        :selectedItem="showType"
-        @change="showType = $event"
-      />
-    </div>
+    <Header
+      :showType="showType"
+      @typeChanged="showType = $event"
+      @output="handleOutput"
+    />
     <div class="container">
-      <WordFrequency v-if="showType === '词语频率表'" />
+      <FrequencyUsedWords v-if="showType === '词语频率表'" ref="ref1" />
+      <CommonUsedWords v-if="showType === '常用字表'" ref="ref2" />
     </div>
   </div>
 </template>
 
 <script>
-import Tab from "./components/Tab.vue";
-import WordFrequency from "./components/WordFrequency.vue";
-
+import Header from "./components/Header.vue";
+import FrequencyUsedWords from "./components/FrequencyUsedWords.vue";
+import CommonUsedWords from "./components/CommonUsedWords.vue";
 export default {
   data() {
     return {
@@ -24,21 +23,27 @@ export default {
     };
   },
   components: {
-    WordFrequency,
-    Tab,
+    Header,
+    FrequencyUsedWords,
+    CommonUsedWords,
   },
 
-  methods: {},
+  methods: {
+    handleOutput() {
+      const ref =
+        this.showType === "词语频率表" ? this.$refs.ref1 : this.$refs.ref2;
+      ref.output();
+    },
+  },
 };
 </script>
 
-<style>
-.header {
-  text-align: center;
-  display: flex;
-  justify-content: center;
+<style lang="scss">
+body {
+  background-color: #f7f7f7;
 }
-.text-center {
-  text-align: center;
+
+.container {
+  margin-top: 3rem;
 }
 </style>

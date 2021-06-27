@@ -32,8 +32,7 @@ export default {
   }
 
   .tab-item {
-    padding: 0.25rem;
-    // background-color: #eee;
+    padding: 0.25rem 0.5rem;
     cursor: pointer;
     border: 1px solid #eee;
   }

@@ -1,12 +1,12 @@
 <template>
-  <div class="WordFrequency mb-4">
-    <div class="text-center p-1">
-      只列入出现次数大于50次的词, 下载自<a href="http://corpus.zhonghuayuwen.org/Resources.aspx" target="_blank">语料库在线网站</a> ({{total}})
-    </div>
-
-    <div class="pagination p-2">
-      <button class="btn small mx-1" @click="handlePrePage">上一页</button>
-      <button class="btn small mx-1" @click="handleNextPage">下一页</button>
+  <div class="FrequencyUsedWords">
+    <div class="text-center p-3">
+      只列入出现次数大于50次的词, 下载自<a
+        href="http://corpus.zhonghuayuwen.org/Resources.aspx"
+        target="_blank"
+        >语料库在线网站</a
+      >
+      ({{ total }})
     </div>
 
     <div class="item-list">
@@ -20,11 +20,17 @@
         <div class="word">{{ item.word }}</div>
       </div>
     </div>
+    <div class="pagination p-2">
+      <button class="btn small mx-1" @click="handlePrePage">上一页</button>
+      <button class="btn small mx-1" @click="handleNextPage">下一页</button>
+    </div>
   </div>
 </template>
 <script>
+import { output } from "../util";
+
 export default {
-  name: "WordFrequency",
+  name: "FrequencyUsedWords",
 
   data() {
     return {
@@ -41,7 +47,7 @@ export default {
   },
   methods: {
     getData() {
-      import(`../res/CorpusWordlist.json`)
+      import(`../res/frequency-used-words.json`)
         .then((module) => module.default)
         .then((res) => {
           this.rawData = res;
@@ -89,44 +95,10 @@ export default {
         `https://hanyu.baidu.com/zici/s?wd=${item.word}&query=${item.word}&srcid=28232&from=kg0`
       );
     },
+
+    output() {
+      output(this.rawData, "FrequencyUsedWords.json");
+    },
   },
 };
 </script>
-
-<style>
-.item-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-row-gap: 1rem;
-  grid-column-gap: 1rem;
-  justify-content: center;
-}
-
-.item {
-  display: inline-flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  font-size: 2rem;
-  background-color: #eceff1;
-  color: black;
-  position: relative;
-  text-align: center;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.item .id {
-  position: absolute;
-  font-size: 12px;
-  top: 0;
-  right: 0;
-  padding: 0.2rem;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>
