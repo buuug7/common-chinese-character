@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack",
-    "pretty-quick": "pretty-quick"
+    "build": "webpack"
   },
   "directories": {
     "doc": "docs"

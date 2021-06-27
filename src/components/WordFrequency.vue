@@ -1,7 +1,7 @@
 <template>
   <div class="WordFrequency mb-4">
     <div class="text-center p-1">
-      只列入出现次数大于50次的词,下载自 www.cncorpus.org 语料库在线网站 ({{total}})
+      只列入出现次数大于50次的词, 下载自<a href="http://corpus.zhonghuayuwen.org/Resources.aspx" target="_blank">语料库在线网站</a> ({{total}})
     </div>
 
     <div class="pagination p-2">
