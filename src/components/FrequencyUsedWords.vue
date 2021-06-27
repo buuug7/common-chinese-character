@@ -1,28 +1,31 @@
 <template>
   <div class="FrequencyUsedWords">
-    <div class="text-center p-3">
-      只列入出现次数大于50次的词, 下载自<a
-        href="http://corpus.zhonghuayuwen.org/Resources.aspx"
-        target="_blank"
-        >语料库在线网站</a
-      >
-      ({{ total }})
-    </div>
-
-    <div class="item-list">
-      <div
-        class="item"
-        v-for="item of data"
-        :key="item.id"
-        @click="handleClick(item)"
-      >
-        <div class="id">{{ item.id }}</div>
-        <div class="word">{{ item.word }}</div>
+    <div class="loading text-center pt-4" v-if="loading">Loading...</div>
+    <div v-else>
+      <div class="text-center p-3">
+        只列入出现次数大于50次的词, 下载自<a
+          href="http://corpus.zhonghuayuwen.org/Resources.aspx"
+          target="_blank"
+          >语料库在线网站</a
+        >
+        ({{ total }})
       </div>
-    </div>
-    <div class="pagination p-2">
-      <button class="btn small mx-1" @click="handlePrePage">上一页</button>
-      <button class="btn small mx-1" @click="handleNextPage">下一页</button>
+
+      <div class="item-list">
+        <div
+          class="item"
+          v-for="item of data"
+          :key="item.id"
+          @click="handleClick(item)"
+        >
+          <div class="id">{{ item.id }}</div>
+          <div class="word">{{ item.word }}</div>
+        </div>
+      </div>
+      <div class="pagination p-2">
+        <button class="btn small mx-1" @click="handlePrePage">上一页</button>
+        <button class="btn small mx-1" @click="handleNextPage">下一页</button>
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +43,7 @@ export default {
       data: [],
       pageSize: 100,
       page: 1,
+      loading: true,
     };
   },
   mounted() {
@@ -54,6 +58,7 @@ export default {
           this.total = res.length;
           this.totalPage = this.calculateTotalPage();
           this.data = res.slice(0, this.pageSize);
+          this.loading = false;
         });
     },
 
